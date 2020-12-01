@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "BreakWeb",
+    "version": "1.0",
+
+    "description": "Break website",
+
+    "icons": {
+        "48": "icons/breakweb-48.png"
+    },
+
+    "browser_action": {
+        "default_icon": "icons/breakweb-48.png",
+        "default_title": "BreakWeb",
+        "default_popup": "popup/index.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["compiled/contentScript.js"]
+        }
+    ],
+
+    "permissions": [
+        "tabs"
+    ]
+}
